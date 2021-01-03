@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
+
+:root {
+  --clr--primary-faint: #fae0e4;
+  --clr-primary-100: #ffcdb2ff;
+  --clr-primary-200: #ffb4a2ff;
+  --clr-primary-300: #ff5c8a;
+  --clr-primary-400: #b5838dff;
+  --clr-primary-500: #6d6875ff;
+  --clr--primary--accent: #ee6c4d;
+  --clr--primary--accent-faint: #f8d8c2;
+  --clr-card-hover:#fae0da;
+  --clr-primary-dark: #283d3b;
+  --clr-white: #fff;
+  --clr--primary-white:#eee;
+  --clr-black: #000;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  line-height: 1.2;
+}
+h2,
+h3,
+p {
+  margin-bottom: 1rem;
+}
+.text-center {
+  text-align: center;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5%);
+}
+.container--narrow {
+  max-width: 35rem;
+}
+header {
+  background: var(--clr--primary--accent-faint);
+}
+header p {
+  letter-spacing: 0.3rem;
+  font-family: "Ubuntu";
+}
+header p img {
+  min-width: 1.5rem;
+  width: 5%;
+}
+header h1 {
+  color: var(--clr--primary--accent);
+  font-size: 1.8rem;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-two,
+.section-three .row > * + * {
+  margin-top: 1rem;
+}
+header,
+section {
+  padding: 3rem 0;
+}
+img {
+  max-width: 100%;
+}
+.section-one h2 {
+  color: var(--clr--primary--accent);
+  line-height: 1.2em;
+}
+.section-two {
+  background: var(--clr-primary-dark);
+  color: var(--clr--primary-white);
+}
+.section-three {
+  background:var(--clr--primary-white);
+}
+.section-four h2 {
+  text-align: center;
+  color: black;
+}
+.card {
+  padding: 1.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 0.2rem 0.5rem;
+  text-align: center;
+  border-left: 0.4rem solid var(--clr--primary--accent);
+  background: white;
+  background: linear-gradient(to left, white 50%, #fae0da 50%) right;
+  background-size: 200%;
+  transition: 0.5s ease-out;
+}
+.card:hover {
+  box-shadow: rgba(17, 12, 46, 0.15) 0 0.5rem 0.5rem 0px;
+  background-position: left;
+  transform: translateY(-0.5rem);
+}
+.card .fas {
+  color: var(--clr--primary--accent);
+  font-size: 2rem;
+}
+.card-title {
+  margin-top: 2rem;
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: var(--clr-primary-500);
+}
+.card-body {
+  color: #283d3b;
+}
+.card:hover .fas {
+  color: #000;
+}
+@media (min-width: 700px) {
+  body {
+    font-size: 1.2rem;
+  }
+  header,
+  section {
+    padding: 5rem 0;
+  }
+  header h1 {
+    color: var(--clr--primary--accent);
+    font-size: 2.5rem;
+  }
+  .row {
+    flex-direction: row;
+  }
+  .row > * {
+    flex-basis: 100%;
+  }
+  .row > * + * {
+    margin-left: 2rem;
+  }
+  .img-container {
+    display: block;
+    text-align: center;
+  }
+  .section-four .container {
+    width: min(90%, 80%);
+  }
+  .card {
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+  .card .fas {
+    font-size: 3rem;
+  }
+}
