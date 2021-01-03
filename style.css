@@ -76,8 +76,6 @@ header h1 {
 .row {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .section-two,
 .section-three .row > * + * {
